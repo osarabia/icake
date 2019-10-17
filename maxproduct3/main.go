@@ -5,6 +5,12 @@ import (
 	"math"
 )
 
+/*
+Given a list of integers, find the highest product you can get from three of the integers.
+
+The input list_of_ints will always have at least three integers.
+*/
+
 func MaxProductOf3(numbers []float64) float64 {
 	var maxProductOf3, highestProductOf2, highest, lowestProductOf2, lowest, current float64
 
