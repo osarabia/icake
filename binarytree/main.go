@@ -3,29 +3,29 @@ package binarytree
 
 type BinaryTree struct {
 	Value int
-	left *BinaryTree
-	right *BinaryTree
+	Left *BinaryTree
+	Right *BinaryTree
 }
 
 
 func (b BinaryTree) InsertLeft(value int) BinaryTree {
 	tree := BinaryTree{value, nil, nil}
-	b.left = &tree
+	b.Left = &tree
 
 	return tree
 }
 
 func (b BinaryTree) InsertRight(value int) BinaryTree {
 	tree := BinaryTree{value, nil, nil}
-	b.right = &tree
+	b.Right = &tree
 
 	return tree
 }
 
 func (b BinaryTree) GetLeft() BinaryTree {
-	return b.left
+	return *b.Left
 }
 
 func (b BinaryTree) GetRight() BinaryTree {
-	return b.right
+	return *b.Right
 }
