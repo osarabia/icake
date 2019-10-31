@@ -8,24 +8,24 @@ type BinaryTree struct {
 }
 
 
-func (b BinaryTree) InsertLeft(value int) BinaryTree {
+func (b *BinaryTree) InsertLeft(value int) *BinaryTree {
 	tree := BinaryTree{value, nil, nil}
 	b.Left = &tree
 
-	return tree
+	return b.Left
 }
 
-func (b BinaryTree) InsertRight(value int) BinaryTree {
+func (b *BinaryTree) InsertRight(value int) *BinaryTree {
 	tree := BinaryTree{value, nil, nil}
 	b.Right = &tree
 
-	return tree
+	return b.Right
 }
 
-func (b BinaryTree) GetLeft() BinaryTree {
-	return *b.Left
+func (b *BinaryTree) GetLeft() *BinaryTree {
+	return b.Left
 }
 
-func (b BinaryTree) GetRight() BinaryTree {
-	return *b.Right
+func (b *BinaryTree) GetRight() *BinaryTree {
+	return b.Right
 }
